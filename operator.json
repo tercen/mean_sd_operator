@@ -1,5 +1,5 @@
 {
-  "name": "Mean and Stdev",
+  "name": "Mean and SD",
   "description": "Compute the mean and standard deviation per cell",
   "tags": ["basic statistics"],
   "authors": ["tercen"],
