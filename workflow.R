@@ -1,17 +1,15 @@
 library(tercen)
 library(dplyr)
 
+options("tercen.workflowId"= "19975e0adc3267c4665f02d347003604")
+options("tercen.stepId"= "c5f084df-dd2a-449b-8630-00e5b9007f9c")
 
-options("tercen.serviceUri" = "https://dev.tercen.com/api/v1")
-options("tercen.username"= "tim")
-options("tercen.password" = "tim2tercen")
-
-options("tercen.workflowId"= "88f6a79fa43b1e80fa2ccf73ef01366e")
-options("tercen.stepId"= "12-15")
 getOption("tercen.workflowId")
 getOption("tercen.stepId")
 
-(ctx = tercenCtx())  %>% 
+ctx <- tercenCtx()
+
+ctx  %>% 
   select(.y, .ci, .ri) %>% 
   group_by(.ci, .ri) %>%
   summarise(mean = mean(.y), sd = sd(.y)) %>%
