@@ -1,6 +1,6 @@
 {
   "name": "Mean and SD",
-  "description": "Calculate the mathamatical average and Standard Diviation of the data points in a cell.",
+  "description": "Calculate the Mean and Standard Deviation of the data points in a cell.",
   "tags": ["basic statistics"],
   "authors": ["tercen"],
   "urls": ["https://github.com/tercen/mean_sd_operator"],
