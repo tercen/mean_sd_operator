@@ -1,11 +1,15 @@
 library(tercen)
 library(dplyr)
+library(data.table)
 
 ctx <- tercenCtx()
 
-ctx  %>% 
-  select(.y, .ci, .ri) %>% 
-  group_by(.ci, .ri) %>%
-  summarise(mean = mean(.y), sd = sd(.y)) %>%
-  ctx$addNamespace() %>%
-  ctx$save()
+df <- ctx %>% 
+  select(.y, .ci, .ri) %>%
+  as.data.table()
+
+df_out <- df[, list(mean = mean(.y, na.rm = TRUE), sd = sd(.y, na.rm = TRUE)), by = .(.ci, .ri)] %>%
+  as_tibble() %>%
+  ctx$addNamespace() 
+
+ctx$save(df_out)
