@@ -1,6 +1,6 @@
 {
   "name": "Mean and SD",
-  "description": "Calculate the Mean and Standard Deviation of the data points in a cell.",
+  "description": "Computes the mean and standard deviation of the data points in a cell.",
   "tags": [
     "descriptive statistics"
   ],
