@@ -12,7 +12,7 @@ The `mean_sd` operator computes the **Mean** and **Standard Deviation** of a set
 | ---------- | ----------- | -------- | ------------------------ |
 | `y-axis`     | numeric     | required | main measurement or data |
 
-#### Output
+### Output
 
 | Factor Name | Factor Type | Calculation | Description                          |
 | ----------- | ----------- | ----------- | ------------------------------------ |
