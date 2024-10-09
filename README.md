@@ -2,22 +2,26 @@
 
 ##### Description
 
-The `mean_sd` operator computes the mean and standard deviation of a set of data points.
+The `mean_sd` operator computes the **Mean** and **Standard Deviation** of a set of data points.
 
-##### Usage
+## Usage
 
-Input projection|.
----|---
-`y-axis`        | numeric, input data, per cell 
+### Input
 
-Output relations|.
----|---
-`mean`       | numeric, mean of the input data
-`sd`         | numeric, standard deviation of the input data
+| Input Zone | Factor Type | Status   | Description              |
+| ---------- | ----------- | -------- | ------------------------ |
+| `y-axis`     | numeric     | required | main measurement or data |
+
+##### Output
+
+| Factor Name | Factor Type | Calculation | Description                          |
+| ----------- | ----------- | ----------- | ------------------------------------ |
+| `mean`        | numeric     | per cell    | mean of the input data               |
+| `sd`          | numeric     | per cell    | standard deviation of the input data |
 
 ##### Details
 
-The operator takes all the values of a cell and calculates their mean and standard deviation. The computation is done per cell. There are two value calculated and returned for each of the input cell.
+The operator calculates the mean and standard deviation of all values input from a data cell. The computation is performed on every cell in the Crosstab projection. Two values are returned for each calculation.
 
 ##### See Also
 
